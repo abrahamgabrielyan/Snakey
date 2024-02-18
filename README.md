@@ -20,15 +20,13 @@
  │   └── game_over.bmp
  │
  ├── src/             # Source code files
- │   ├── Game.cc      # Implementation of the Game class
- │   ├── Game.hpp     # Declaration of the Game class
- │   ├── Fruit.cc     # Implementation of the Fruit class
- │   ├── Fruit.hpp    # Declaration of the Fruit class
- │   ├── Snake.cc     # Implementation of the Snake class
- │   ├── Snake.hpp    # Declaration of the Snake class
- │   └── main.cc      # Main function to start the game
- │
- └── README.md        # Project README file
+     ├── Game.cc      # Implementation of the Game class
+     ├── Game.hpp     # Declaration of the Game class
+     ├── Fruit.cc     # Implementation of the Fruit class
+     ├── Fruit.hpp    # Declaration of the Fruit class
+     ├── Snake.cc     # Implementation of the Snake class
+     ├── Snake.hpp    # Declaration of the Snake class
+     └── main.cc      # Main function to start the game
  ```
  
  ## Usage
