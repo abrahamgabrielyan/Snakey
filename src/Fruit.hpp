@@ -39,36 +39,36 @@ public:
      * @brief Retrieves the fruit's x-coordinate.
      * @return The fruit's x-coordinate.
      */
-    int32_t GetX() const noexcept;
+    int32_t GetX(void) const noexcept;
 
     /**
      * @brief Retrieves the fruit's y-coordinate.
      * @return The fruit's y-coordinate.
      */
-    int32_t GetY() const noexcept;
+    int32_t GetY(void) const noexcept;
 
     /**
      * @brief Retrieves the fruit's width.
      * @return The fruit's width.
      */
-    int32_t GetW() const noexcept;
+    int32_t GetW(void) const noexcept;
 
     /**
      * @brief Retrieves the fruit's height.
      * @return The fruit's height.
      */
-    int32_t GetH() const noexcept;
+    int32_t GetH(void) const noexcept;
 
     /**
      * @brief Initializes the fruit's position randomly.
      */
-    void InitRandom() noexcept;
+    void InitRandom(void) noexcept;
 
     /**
      * @brief Retrieves the raw SDL_Rect representing the fruit's position.
      * @return The SDL_Rect representing the fruit's position.
      */
-    const SDL_Rect& GetRawFruit() const noexcept;
+    const SDL_Rect& GetRawFruit(void) const noexcept;
 
     /**< Constructor */
     Fruit();
