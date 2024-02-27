@@ -34,7 +34,7 @@ int32_t Snakey::Fruit::GetH(void) const noexcept {
   return fruit_.h;
 }
 
-void Snakey::Fruit::InitRandom() noexcept {
+void Snakey::Fruit::InitRandom(void) noexcept {
   fruit_ = {distance_(range_), distance_(range_), 10, 10};
 }
 
