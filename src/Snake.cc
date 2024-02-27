@@ -34,7 +34,7 @@ const Uint64 Snakey::Snake::GetBodySize(void) const noexcept {
   return snake_body_.size();
 }
 
-void Snakey::Snake::AddPart() noexcept {
+void Snakey::Snake::AddPart(void) noexcept {
   snake_body_.push_front(head_);
 }
 
