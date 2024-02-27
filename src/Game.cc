@@ -10,7 +10,7 @@
 
 //Includes from standard library
 
-void Snakey::Game::ShowLosingScreen() {
+void Snakey::Game::ShowLosingScreen(void) {
     SDL_Surface* surface = SDL_LoadBMP("res/game_over.bmp");
     if (!surface) {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "ERROR: Failed to initialize splashscreen surface. %s\n", SDL_GetError());
@@ -33,7 +33,7 @@ void Snakey::Game::ShowLosingScreen() {
     exit(EXIT_FAILURE);
 }
 
-void Snakey::Game::HandleDirection() {
+void Snakey::Game::HandleDirection(void) {
     while(SDL_PollEvent(&event_)) {
         if(event_.type == SDL_QUIT) {
             // Quit if the window is closed
@@ -57,7 +57,7 @@ void Snakey::Game::HandleDirection() {
     }
 }
 
-void Snakey::Game::HandleMovement() {
+void Snakey::Game::HandleMovement(void) {
     // Move the snake based on its direction
     switch(direction_) {
         case Direction_::DOWN: {
@@ -84,7 +84,7 @@ void Snakey::Game::HandleMovement() {
     }
 }
 
-void Snakey::Game::HandleBordersCollision() {
+void Snakey::Game::HandleBordersCollision(void) {
     auto snake_head = snake_.GetSnakeHead();
     // Check if snake collides with borders and display losing screen if true
     if (snake_head.x < 0 or snake_head.y < 0 or
@@ -94,7 +94,7 @@ void Snakey::Game::HandleBordersCollision() {
     }
 }
 
-void Snakey::Game::HandleEatingEvent() {
+void Snakey::Game::HandleEatingEvent(void) {
     auto snake_head = snake_.GetSnakeHead();
     static bool is_first_iteration = true;
     static bool is_eaten = false;
@@ -118,7 +118,7 @@ void Snakey::Game::HandleEatingEvent() {
     }
 }
 
-void Snakey::Game::HandleSnakePartCollision() {
+void Snakey::Game::HandleSnakePartCollision(void) {
     // Check if snake collides with itself and display losing screen if true
     for(auto& part : snake_.GetSnakeBody()) {
         if(snake_.GetSnakeHead().x == part.x and snake_.GetSnakeHead().y == part.y) {
@@ -127,7 +127,7 @@ void Snakey::Game::HandleSnakePartCollision() {
     }
 }
 
-void Snakey::Game::ResizeSnake() {
+void Snakey::Game::ResizeSnake(void) {
     // Add a part to the snake and remove parts if necessary to match its size
     snake_.AddPart();
     while(snake_.GetBodySize() > snake_.GetSize()) {
@@ -135,7 +135,7 @@ void Snakey::Game::ResizeSnake() {
     }
 }
 
-void Snakey::Game::RenderObjects() {
+void Snakey::Game::RenderObjects(void) {
     // Clear screen and set draw color
     SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 255);
     SDL_RenderClear(renderer_);
@@ -153,7 +153,7 @@ void Snakey::Game::RenderObjects() {
     SDL_Delay(25);
 }
 
-void Snakey::Game::Run() {
+void Snakey::Game::Run(void) {
     // Main game loop
     while(running_state_) {
         HandleDirection();
