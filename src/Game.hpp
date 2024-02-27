@@ -30,47 +30,47 @@ public:
     /**
      * @brief Displays the losing screen when the game is over.
      */
-    void ShowLosingScreen();
+    void ShowLosingScreen(void);
 
     /**
      * @brief Handles user input for changing the snake's direction.
      */
-    void HandleDirection();
+    void HandleDirection(void);
 
     /**
      * @brief Handles the movement of the snake.
      */
-    void HandleMovement();
+    void HandleMovement(void);
 
     /**
      * @brief Handles collision with game borders.
      */
-    void HandleBordersCollision();
+    void HandleBordersCollision(void);
 
     /**
      * @brief Handles the event when the snake eats a fruit.
      */
-    void HandleEatingEvent();
+    void HandleEatingEvent(void);
 
     /**
      * @brief Handles collision with parts of the snake's body.
      */
-    void HandleSnakePartCollision();
+    void HandleSnakePartCollision(void);
 
     /**
      * @brief Resizes the snake after eating a fruit.
      */
-    void ResizeSnake();
+    void ResizeSnake(void);
 
     /**
      * @brief Renders all game objects on the screen.
      */
-    void RenderObjects();
+    void RenderObjects(void);
 
     /**
      * @brief Runs the main game loop.
      */
-    void Run();
+    void Run(void);
 
     /**< Constructor */
     Game();
